@@ -6,7 +6,7 @@ service is running.
 
 ## Installation
 Use python 3 in a virtual environment or otherwise; 
-tested with python 3.6
+tested with python 3.6 and 3.8
 
 Run `pip install -r requirements.txt` to install aiohttp
 
