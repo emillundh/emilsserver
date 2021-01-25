@@ -6,6 +6,8 @@ from aiohttp.web_middlewares import middleware
 
 @middleware
 async def parse_json(request, handler):
+    if request.method == 'GET':
+        return await handler(request)
     try:
         parsed_json = await request.json()
         path = parsed_json['path']
