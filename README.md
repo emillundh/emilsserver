@@ -31,8 +31,9 @@ Return the contents of the text file in path.
 
 ## Reflections & design choices
 ### Web service framework
-aiohttp is my framework of choice; it is minimal and easy to use 
-and designed to deal asynchronously with I/O operations.
+aiohttp is my framework of choice; it is easy to use
+and designed to deal asynchronously with I/O operations
+using python's asyncio library as an alternative to full threading.
 
 ### Graceful shutdown
 aiohttp takes care of this out of the box.
@@ -53,3 +54,7 @@ the user running the server can access)
 not caught by the handlers)
 
 The exceptions are handled in a middleware, in order to reduce code duplication.
+
+### Unit tests
+A test for the case "Not a text file" was omitted since it is not easily 
+implemented with the chosen tools.
